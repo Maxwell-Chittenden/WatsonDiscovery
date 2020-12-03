@@ -1,0 +1,42 @@
+.header {
+  background: #30aed2;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 30px;
+  display: block;
+}
+
+.container {
+  background: whitesmoke;
+  margin: auto;
+  margin-top: 20px;
+  padding: 2px;
+  max-width: 400px;
+  border-radius: 50px;
+  position: relative;
+  text-emphasis: bold;
+  color: darkslategray;
+}
+
+img {
+  background: whitesmoke;
+  margin: auto;
+  width: 450px;
+  margin-top: 20px;
+  padding: 25px 40px;
+  border-radius: 50px;
+  position: relative;
+  float: center;
+}
+
+.button-row {
+  margin: auto;
+  margin-top: 20px;
+  padding: 2px;
+  position: relative;
+}
+
+a{
+  margin: 10px;
+}
+
