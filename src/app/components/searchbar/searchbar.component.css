@@ -1,0 +1,16 @@
+.container {
+  background: whitesmoke;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 50px;
+  position: relative;
+  text-emphasis: bold;
+  text-align: center;
+  color: darkslategray;
+}
+
+p {
+  padding: 20px;
+}

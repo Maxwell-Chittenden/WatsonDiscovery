@@ -1,0 +1,19 @@
+.container{
+  background: #292929;
+  color: lightgray;
+  text-align:center;
+  position: relative;
+  margin: auto;
+  padding: 20px;
+}
+
+img{
+  width: 250px;
+  padding: 20px
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+declare const discovery:any;
 
 @Component({
   selector: 'app-root',

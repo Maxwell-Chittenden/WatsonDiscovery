@@ -1,6 +1,6 @@
 .header {
-  background: #30aed2;
   text-align: center;
+  background: #30aed2;
   margin: auto;
   padding-bottom: 30px;
   display: block;
@@ -10,7 +10,8 @@
   background: whitesmoke;
   margin: auto;
   margin-top: 20px;
-  padding: 2px;
+  padding: 5px;
+  padding-top: 10px;
   max-width: 400px;
   border-radius: 50px;
   position: relative;
