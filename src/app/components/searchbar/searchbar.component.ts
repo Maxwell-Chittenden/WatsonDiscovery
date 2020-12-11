@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
-import { Config } from '../../classes/config'
 
 @Component({
   selector: 'app-searchbar',
@@ -9,18 +8,35 @@ import { Config } from '../../classes/config'
 })
 export class SearchbarComponent implements OnInit {
 
-  config: Config
-  str: String
+  allData: JSON[]
+  length: number = 0
+  pageIndex: number = 0
+  pageSize: number = 5
+  lowValue: number = 0
+  highValue: number = this.pageSize
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
   }
 
-  myTest(): void {
-    this.apiService.getData().subscribe((response: Config) => this.config = {
-      data: response.data,
+  getPaginatorData(event) {
+    if (event.pageIndex === this.pageIndex + 1) {
+      this.lowValue = this.lowValue + this.pageSize
+      this.highValue = this.highValue + this.pageSize
+    }
+    else if (event.pageIndex === this.pageIndex - 1) {
+      this.lowValue = this.lowValue - this.pageSize
+      this.highValue = this.highValue - this.pageSize
+    }
+    this.pageIndex = event.pageIndex;
+  }
+
+  mySearch(value: String): void {
+    this.apiService.apiCall(value).then(response => {
+      console.log(response.results)
+      this.length = response.results.length
+      this.allData = response.results
     })
-    this.str = JSON.stringify(this.config.data)
   }
 }

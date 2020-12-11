@@ -4,17 +4,14 @@ const cors = require('cors')
 const port = 3000
 const api = require('./api')
 
-
 app.use(cors())
 
-var test = { "data": "Hello World" }
-
 app.get('/', (req, res) => {
-  api.apiTest()
+  console.log(req.query)
+  api.queryData(req.query.value)
     .then(response => {
-      console.log("==========================================================================")
-      console.log(JSON.stringify(response, null, 2));
-      res.json({ "data" : response.headers.server })
+      console.log("Sucess");
+      res.json(response)
     });
 })
 

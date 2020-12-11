@@ -1,3 +1,3 @@
 export interface Config{
-  data: string;
+  data: JSON;
 }

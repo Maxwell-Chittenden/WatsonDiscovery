@@ -3,14 +3,30 @@
   margin: auto;
   margin-top: 20px;
   padding: 20px;
-  max-width: 400px;
-  border-radius: 50px;
+  max-width: 800px;
+  border-radius: 10px;
   position: relative;
   text-emphasis: bold;
   text-align: center;
   color: darkslategray;
 }
 
+.search{
+  padding: 5px;
+  margin-right: 10px;
+  background-color: white;
+  border-radius: 10px;
+  width: 70%
+}
+
 p {
   padding: 20px;
+}
+
+li{
+  padding: 10px;
+}
+
+ul{
+  list-style: none;
 }

@@ -1,4 +1,25 @@
 <div class=container>
-  <button mat-raised-button (click)="myTest()"> Test</button>
-  <p>{{this.str}}</p>
+  <mat-form-field class=search>
+    <mat-label>Search for Movies</mat-label>
+    <input matInput #search (keyup.enter)="mySearch(search.value)">
+  </mat-form-field>
+  <button mat-raised-button (click)="mySearch(search.value)">Search</button>
+</div>
+<div class=container>
+  <ul>
+    <li *ngFor="let data of allData | slice: lowValue : highValue">
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{data.Title}}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{data.result_metadata.score}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>{{data.Plot}}</p>
+      </mat-expansion-panel>
+    </li>
+  </ul>
+  <mat-paginator [length]="length" [pageSize]="pageSize" (page)="getPaginatorData($event)"></mat-paginator>
 </div>

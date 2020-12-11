@@ -2,9 +2,9 @@
   background: #292929;
   color: lightgray;
   text-align:center;
-  position: relative;
   margin: auto;
   padding: 20px;
+  bottom: 0;
 }
 
 img{
@@ -12,8 +12,8 @@ img{
   padding: 20px
 }
 
-#footer {
-  position: absolute;
+.footer,
+.push {
   bottom: 0;
   width: 100%;
 }
